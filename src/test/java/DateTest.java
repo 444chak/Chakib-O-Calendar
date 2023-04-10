@@ -44,5 +44,15 @@ public class DateTest {
         );
     }
 
+    @Test
+    @DisplayName("Test de la méthode dateDuLendemain()")
+    public void dateDuLendemain() {
+        assertAll(
+                () -> assertEquals(0, new Date(15, 7, 2004).compareTo(new Date(14, 7, 2004).dateDuLendemain())),
+                () -> assertEquals(0, new Date(1, 4, 2012).compareTo(new Date(31, 3, 2012).dateDuLendemain())),
+                () -> assertEquals(0, new Date(1, 1, 1966).compareTo(new Date(31, 12, 1965).dateDuLendemain()))
+                );
+    }
+
 
 }
