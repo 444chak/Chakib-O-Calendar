@@ -54,5 +54,15 @@ public class DateTest {
                 );
     }
 
+    @Test
+    @DisplayName("Test de la méthode dateDeLaVeille()")
+    public void dateDeLaVeille() {
+        assertAll(
+                () -> assertEquals(0, new Date(13, 7, 2004).compareTo(new Date(14, 7, 2004).dateDeLaVeille())),
+                () -> assertEquals(0, new Date(31, 3, 2012).compareTo(new Date(1, 4, 2012).dateDeLaVeille())),
+                () -> assertEquals(0, new Date(31, 12, 1964).compareTo(new Date(1, 1, 1965).dateDeLaVeille()))
+        );
+    }
+
 
 }
