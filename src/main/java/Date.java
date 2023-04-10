@@ -62,7 +62,7 @@ public class Date {
      *
      * @return boolean  True si elle l'est, sinon False
      */
-    private static boolean estBissextile(int parAnnee){
+    static boolean estBissextile(int parAnnee){
         return (parAnnee % 4 == 0 && parAnnee % 100 != 0) || parAnnee % 400 == 0;
     }
 
