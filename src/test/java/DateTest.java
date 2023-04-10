@@ -1,6 +1,8 @@
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
 
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 public class DateTest {
@@ -61,6 +63,18 @@ public class DateTest {
                 () -> assertEquals(0, new Date(13, 7, 2004).compareTo(new Date(14, 7, 2004).dateDeLaVeille())),
                 () -> assertEquals(0, new Date(31, 3, 2012).compareTo(new Date(1, 4, 2012).dateDeLaVeille())),
                 () -> assertEquals(0, new Date(31, 12, 1964).compareTo(new Date(1, 1, 1965).dateDeLaVeille()))
+        );
+    }
+
+    @Test
+    @DisplayName("Test du constructeur de la classe Date sans paramètre")
+    public void constructeurSansParametre() {
+        LocalDate dateLocale = LocalDate.now();
+        Date date = new Date();
+        assertAll(
+                () -> assertEquals(dateLocale.getDayOfMonth(), date.getChJour()),
+                () -> assertEquals(dateLocale.getMonthValue(), date.getChMois()),
+                () -> assertEquals(dateLocale.getYear(), date.getChAnnee())
         );
     }
 
