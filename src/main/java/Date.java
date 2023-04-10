@@ -73,7 +73,7 @@ public class Date {
      * @param parAnnee  Année
      * @see Date#estBissextile(int)
      */
-    private static int dernierJourDuMois(int parMois, int parAnnee){
+    public static int dernierJourDuMois(int parMois, int parAnnee){
         switch(parMois){
             case 2:
                 if(Date.estBissextile(parAnnee)){
