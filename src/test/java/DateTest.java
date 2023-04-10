@@ -11,6 +11,7 @@ public class DateTest {
     @DisplayName("Test de la méthode estBissextile(int annee)")
     public void estBissextile()
     {
+        System.out.println("Test de la méthode estBissextile()");
         // Selon la partition d'équivalence, il y a quatre cas à tester
         assertAll(
                 () -> assertTrue(Date.estBissextile(2020)),
@@ -23,6 +24,7 @@ public class DateTest {
     @Test
     @DisplayName("Test de la méthode dernierJourDuMois(int mois, int annee)")
     public void dernierJourDuMois() {
+        System.out.println("Test de la méthode dernierJourDuMois()");
         assertAll(
                 () -> assertEquals(31, Date.dernierJourDuMois(3, 2014)),
                 () -> assertEquals(30, Date.dernierJourDuMois(4, 1972)),
@@ -35,6 +37,7 @@ public class DateTest {
     @Test
     @DisplayName("Test de la méthode compareTo()")
     public void compareTo() {
+        System.out.println("Test de la méthode compareTo()");
         assertAll(
                 () -> assertEquals(-1, new Date(14, 7, 2004).compareTo(new Date(14, 7, 2005))),
                 () -> assertEquals(1, new Date(4, 12, 1942).compareTo(new Date(4, 12, 1935))),
@@ -49,6 +52,7 @@ public class DateTest {
     @Test
     @DisplayName("Test de la méthode dateDuLendemain()")
     public void dateDuLendemain() {
+        System.out.println("Test de la méthode dateDuLendemain()");
         assertAll(
                 () -> assertEquals(0, new Date(15, 7, 2004).compareTo(new Date(14, 7, 2004).dateDuLendemain())),
                 () -> assertEquals(0, new Date(1, 4, 2012).compareTo(new Date(31, 3, 2012).dateDuLendemain())),
@@ -59,6 +63,7 @@ public class DateTest {
     @Test
     @DisplayName("Test de la méthode dateDeLaVeille()")
     public void dateDeLaVeille() {
+        System.out.println("Test de la méthode dateDeLaVeille()");
         assertAll(
                 () -> assertEquals(0, new Date(13, 7, 2004).compareTo(new Date(14, 7, 2004).dateDeLaVeille())),
                 () -> assertEquals(0, new Date(31, 3, 2012).compareTo(new Date(1, 4, 2012).dateDeLaVeille())),
@@ -69,6 +74,7 @@ public class DateTest {
     @Test
     @DisplayName("Test du constructeur de la classe Date sans paramètre")
     public void constructeurSansParametre() {
+        System.out.println("Test du constructeur de la classe Date sans paramètre");
         LocalDate dateLocale = LocalDate.now();
         Date date = new Date();
         assertAll(
