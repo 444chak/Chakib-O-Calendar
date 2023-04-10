@@ -1,13 +1,17 @@
 import org.junit.Test;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.MethodOrderer;
+import org.junit.jupiter.api.Order;
+import org.junit.jupiter.api.TestMethodOrder;
 
 import java.time.LocalDate;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class DateTest {
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class) public class DateTest {
 
     @Test
+    @Order(1)
     @DisplayName("Test de la méthode estBissextile(int annee)")
     public void estBissextile()
     {
@@ -22,6 +26,7 @@ public class DateTest {
     }
 
     @Test
+    @Order(2)
     @DisplayName("Test de la méthode dernierJourDuMois(int mois, int annee)")
     public void dernierJourDuMois() {
         System.out.println("Test de la méthode dernierJourDuMois()");
@@ -35,6 +40,7 @@ public class DateTest {
     }
 
     @Test
+    @Order(2)
     @DisplayName("Test de la méthode compareTo()")
     public void compareTo() {
         System.out.println("Test de la méthode compareTo()");
@@ -50,6 +56,7 @@ public class DateTest {
     }
 
     @Test
+    @Order(3)
     @DisplayName("Test de la méthode dateDuLendemain()")
     public void dateDuLendemain() {
         System.out.println("Test de la méthode dateDuLendemain()");
@@ -61,6 +68,7 @@ public class DateTest {
     }
 
     @Test
+    @Order(3)
     @DisplayName("Test de la méthode dateDeLaVeille()")
     public void dateDeLaVeille() {
         System.out.println("Test de la méthode dateDeLaVeille()");
@@ -72,6 +80,7 @@ public class DateTest {
     }
 
     @Test
+    @Order(0)
     @DisplayName("Test du constructeur de la classe Date sans paramètre")
     public void constructeurSansParametre() {
         System.out.println("Test du constructeur de la classe Date sans paramètre");
