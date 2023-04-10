@@ -19,7 +19,7 @@ public class DateTest {
     }
 
     @Test
-    @DisplayName("Test de la méthode dernierJourDuMois()")
+    @DisplayName("Test de la méthode dernierJourDuMois(int mois, int annee)")
     public void dernierJourDuMois() {
         assertAll(
                 () -> assertEquals(31, Date.dernierJourDuMois(3, 2014)),
